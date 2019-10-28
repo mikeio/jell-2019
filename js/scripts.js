@@ -1,9 +1,9 @@
-const el = document.querySelector('.toggle-me');
-const handleToggle = () => el.classList.toggle('active');
+$(document).ready(function(){
 
-el.onclick = () => handleToggle();
-el.addEventListener('keyup', (event) => {
-  if(event.keyCode === 13 || event.keyCode === 32) {
-    handleToggle();
-  }
+	$('.menu').on('click', function() {
+		$('body').toggleClass('fixed');
+        $('.menu').toggleClass('menu-active');
+        $('.nav__mobile').toggleClass('nav__mobile-open');
+    });
+
 });
