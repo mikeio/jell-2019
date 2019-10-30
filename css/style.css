@@ -49,6 +49,7 @@ html {
   box-sizing: border-box; }
 
 body {
+  height: 100%;
   font-family: 'Poppins', sans-serif;
   color: #a2abb5;
   overflow-x: hidden;
@@ -108,20 +109,23 @@ a {
   margin: 18px;
   padding: 42px; }
 
-.nav .logo {
+.header .header__logo {
   width: 42px;
   height: auto;
   display: block; }
 
-.nav .nav__desktop {
+.header .nav-desktop {
   display: none; }
 
-.nav__mobile {
+.nav-mobile ul {
+  display: none; }
+
+.nav-mobile .nav-mobile-bg {
   position: absolute;
-  right: 62px;
-  top: 62px;
-  width: 34px;
-  height: 34px;
+  right: 60px;
+  top: 60px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background: #f9ddd6 url("../img/floral_pink.jpg");
   background-size: 1440px auto;
@@ -130,23 +134,42 @@ a {
   -webkit-transition: all .6s linear;
   -o-transition: all .6s linear;
   transition: all .6s linear; }
-  .nav__mobile ul {
-    display: none; }
 
-.nav__mobile-open {
+.nav-mobile--open ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: block;
+  list-style-type: none;
+  z-index: 2; }
+  .nav-mobile--open ul li {
+    text-align: center; }
+    .nav-mobile--open ul li a {
+      color: #ffffff;
+      font-size: 1.75em;
+      font-family: 'CircularStd', sans-serif;
+      letter-spacing: -.016em;
+      line-height: 1.143;
+      margin: 15px 0;
+      display: block; }
+
+.nav-mobile--open .nav-mobile-bg {
   width: 250vh;
   height: 250vh;
   top: calc(-125vh + 78px);
   right: calc(-125vh + 78px); }
 
-.menu .menu__background {
+.menu .menu__bg {
   position: absolute;
-  right: 62px;
-  top: 62px;
-  width: 34px;
-  height: 34px;
+  right: 60px;
+  top: 60px;
+  width: 36px;
+  height: 36px;
   background: #ff6687;
-  border-radius: 50% 50% 50% 50%;
+  border-radius: 50%;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -182,21 +205,21 @@ a {
       margin-bottom: 0;
       margin-left: auto; }
 
-.menu-active .menu__background {
+.menu--open .menu__bg {
   background: #ffbdc9 !important; }
 
-.menu-active .menu__icon span {
+.menu--open .menu__icon span {
   width: 100% !important;
   -webkit-transform-origin: 50% 50% !important;
   -ms-transform-origin: 50% 50% !important;
   transform-origin: 50% 50% !important; }
-  .menu-active .menu__icon span:nth-child(1) {
+  .menu--open .menu__icon span:nth-child(1) {
     -webkit-transform: rotate(45deg) translate(4px, 4px);
     -ms-transform: rotate(45deg) translate(4px, 4px);
     transform: rotate(45deg) translate(4px, 4px); }
-  .menu-active .menu__icon span:nth-child(2) {
+  .menu--open .menu__icon span:nth-child(2) {
     opacity: 0; }
-  .menu-active .menu__icon span:nth-child(3) {
+  .menu--open .menu__icon span:nth-child(3) {
     -webkit-transform: rotate(-45deg) translate(4px, -4px);
     -ms-transform: rotate(-45deg) translate(4px, -4px);
     transform: rotate(-45deg) translate(4px, -4px); }
@@ -204,24 +227,24 @@ a {
 .intro {
   margin: 40px auto; }
 
-.bio .hello__icon {
+.intro__bio .hello-icon {
   width: 40px;
   height: auto; }
 
-.bio h1 {
+.intro__bio h1 {
   margin-top: 17px; }
 
 .illustration {
   display: none; }
 
-.contact .col-xs-12 {
+footer .col-xs-12 {
   border-top: 2px solid #f1f2f4; }
 
 @media (min-width: 48em) {
   .menu,
-  .nav__mobile {
+  .nav-mobile {
     display: none; }
-  .nav .nav__desktop {
+  .header .nav-desktop {
     list-style-type: none;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -229,7 +252,7 @@ a {
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end; }
-    .nav .nav__desktop li {
+    .header .nav-desktop li {
       display: inline; }
-      .nav .nav__desktop li:nth-of-type(2) {
+      .header .nav-desktop li:nth-of-type(2) {
         margin: auto 40px; } }

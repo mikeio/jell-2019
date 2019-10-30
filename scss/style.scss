@@ -18,6 +18,7 @@ html {
 }
 
 body {
+  height: 100%;
   font-family: 'Poppins', sans-serif;
   color: $gray;
   overflow-x: hidden;
@@ -82,56 +83,86 @@ a {
   padding: 42px;
 }
 
-.nav {
+.header {
 
-  .logo {
+  .header__logo {
     width: 42px;
     height: auto;
     display: block;
   }
 
-  .nav__desktop {
+  .nav-desktop {
     display: none;
   }
 }
 
-.nav__mobile {
-  position: absolute;
-  right: 62px;
-  top: 62px;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: $tan url("../img/floral_pink.jpg");
-  background-size: 1440px auto;
-  background-position: center center;
-  background-repeat: repeat;
-
-  transition: all .6s linear;
+.nav-mobile {
 
   ul {
     display: none;
   }
-}
 
-.nav__mobile-open {
-  width: 250vh;
-  height: 250vh;
-  top: calc(-125vh + 78px);
-  right: calc(-125vh + 78px);
+  .nav-mobile-bg {
+    position: absolute;
+    right: 60px;
+    top: 60px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: $tan url("../img/floral_pink.jpg");
+    background-size: 1440px auto;
+    background-position: center center;
+    background-repeat: repeat;
+  
+    transition: all .6s linear;
+  }
+}
+  
+.nav-mobile--open {
+  
+  ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    list-style-type: none;
+    z-index: 2;
+
+    li {
+      text-align: center;
+
+      a {
+        color: $white;
+        font-size: 1.75em;
+        font-family: 'CircularStd', sans-serif;
+        letter-spacing: -.016em;
+        line-height: 1.143;
+        margin: 15px 0;
+        display: block;
+      }
+    }
+  }
+
+  .nav-mobile-bg {
+    width: 250vh;
+    height: 250vh;
+    top: calc(-125vh + 78px);
+    right: calc(-125vh + 78px);
+  }
 }
 
 
 .menu {
 
-  .menu__background {
+  .menu__bg {
     position: absolute;
-    right: 62px;
-    top: 62px;
-    width: 34px;
-    height: 34px;
+    right: 60px;
+    top: 60px;
+    width: 36px;
+    height: 36px;
     background: $pink;
-    border-radius: 50% 50% 50% 50%;
+    border-radius: 50%;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -170,9 +201,9 @@ a {
   }
 }
 
-.menu-active {
+.menu--open {
 
-  .menu__background {
+  .menu__bg {
     background: $pink-light !important;
   }
 
@@ -202,9 +233,9 @@ a {
   margin: 40px auto;
 }
 
-.bio {
+.intro__bio {
 
-  .hello__icon {
+  .hello-icon {
     width: 40px;
     height: auto;
   }
@@ -218,7 +249,7 @@ a {
   display: none;
 }
 
-.contact {
+footer {
   
   .col-xs-12 {
     border-top: 2px solid $gray-light;
@@ -229,13 +260,13 @@ a {
 @media (min-width: 48em) {
 
 .menu,
-.nav__mobile {
+.nav-mobile {
   display: none;
 }
 
-.nav {
+.header {
 
-  .nav__desktop {
+  .nav-desktop {
     list-style-type: none;
     display: flex;
     justify-content: flex-end;
