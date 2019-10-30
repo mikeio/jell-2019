@@ -8,15 +8,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css">
   <link rel="stylesheet" href="css/style.css" type="text/css">
+  <script src="https://kit.fontawesome.com/6842fb1baa.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
   <div class="nav-mobile">
       <ul>
-        <li><a href="#">Resume</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">Resume<span>.</span></a></li>
+        <li><a href="#">Contact<span>.</span></a></li>
+        <li><a href="#">LinkedIn<span>.</span></a></li>
       </ul>
       <div class="nav-mobile-bg"></div>
   </div>
@@ -37,7 +38,14 @@
           <ul class="nav-desktop">
             <li>Resume</li>
             <li>Contact</li>
-            <li>LinkedIn</li>
+            <li>
+              <a href="#">
+                <span class="fa-stack fa-2x">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
+                </span>
+              </a>
+            </li>
           </ul>
 
           <div class="menu">
@@ -72,7 +80,7 @@
           
         </div>
 
-        <div class="col-xs-12 illustration">
+        <div class="col-xs-12 intro__illustration">
           Illustration
         </div>
 
@@ -83,20 +91,30 @@
 
       <div class="row">
 
-        <div class="col-xs-12">
-          <h1>Let's Connect</h1>
-            <p>LinkedIn</p>
+        <div class="col-xs-10 footer__contact-link">
+          <h2>Let's Connect</h2>
+          <p>LinkedIn</p>
         </div>
 
-        <div class="col-xs-12">
-          <h1>Contact</h1>
-            <p>hello@jellk.com</p>
+        <div class="col-xs-2 footer__contact-arrow">
+          <img src="img/arrow-right.svg" class="arrow">
         </div>
+
+        <div class="col-xs-10 footer__contact-link">
+          <h2>Contact</h2>
+          <p>hello@jellk.com</p>
         </div>
+
+        <div class="col-xs-2 footer__contact-arrow">
+          <img src="img/arrow-right.svg" class="arrow">
+        </div>
+
       </div>
-    </section>
+    </footer>
     
   </div>
+
+<div id='tr-footer'></div>
 
 <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"

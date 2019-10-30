@@ -39,8 +39,21 @@
   margin-right: 0;
   margin-left: 0; }
 
-nav {
-  border: 1px solid #242333; }
+@-webkit-keyframes slide-down {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%); }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0); } }
+
+@-moz-keyframes slide-down {
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(-100%); }
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0); } }
 
 html {
   height: 100%;
@@ -71,6 +84,12 @@ h1 {
   color: #242333;
   letter-spacing: -.016em;
   line-height: 1.143; }
+
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.875em;
+  color: #242333;
+  font-weight: 600; }
 
 ul {
   margin: 0;
@@ -107,23 +126,16 @@ a {
 .main {
   background: #ffffff;
   margin: 18px;
-  padding: 42px; }
-
-.header .header__logo {
-  width: 42px;
-  height: auto;
-  display: block; }
-
-.header .nav-desktop {
-  display: none; }
+  padding: 42px 42px 8px 42px;
+  overflow: auto; }
 
 .nav-mobile ul {
   display: none; }
 
 .nav-mobile .nav-mobile-bg {
   position: absolute;
-  right: 60px;
-  top: 60px;
+  right: 61px;
+  top: 61px;
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -144,9 +156,12 @@ a {
   transform: translate(-50%, -50%);
   display: block;
   list-style-type: none;
-  z-index: 2; }
+  z-index: 2;
+  opacity: 1; }
   .nav-mobile--open ul li {
-    text-align: center; }
+    text-align: center;
+    -webkit-animation: slide-down 1s linear;
+    animation: slide-down 1s linear; }
     .nav-mobile--open ul li a {
       color: #ffffff;
       font-size: 1.75em;
@@ -155,6 +170,8 @@ a {
       line-height: 1.143;
       margin: 15px 0;
       display: block; }
+      .nav-mobile--open ul li a span {
+        color: #ffbdc9; }
 
 .nav-mobile--open .nav-mobile-bg {
   width: 250vh;
@@ -162,10 +179,18 @@ a {
   top: calc(-125vh + 78px);
   right: calc(-125vh + 78px); }
 
-.menu .menu__bg {
+.header .header__logo {
+  width: 42px;
+  height: auto;
+  display: block; }
+
+.header .nav-desktop {
+  display: none; }
+
+.header .menu .menu__bg {
   position: absolute;
-  right: 60px;
-  top: 60px;
+  right: 61px;
+  top: 61px;
   width: 36px;
   height: 36px;
   background: #ff6687;
@@ -184,10 +209,10 @@ a {
   -o-transition: all .3s linear;
   transition: all .3s linear; }
 
-.menu .menu__icon {
+.header .menu .menu__icon {
   width: 14px;
   position: relative; }
-  .menu .menu__icon span {
+  .header .menu .menu__icon span {
     width: 100%;
     height: 2px;
     background: #ffffff;
@@ -196,53 +221,76 @@ a {
     -webkit-transition: all .3s linear;
     -o-transition: all .3s linear;
     transition: all .3s linear; }
-    .menu .menu__icon span:nth-child(1) {
+    .header .menu .menu__icon span:nth-child(1) {
       width: 8px; }
-    .menu .menu__icon span:nth-child(2) {
+    .header .menu .menu__icon span:nth-child(2) {
       margin: 4px auto; }
-    .menu .menu__icon span:nth-child(3) {
+    .header .menu .menu__icon span:nth-child(3) {
       width: 8px;
       margin-bottom: 0;
       margin-left: auto; }
 
-.menu--open .menu__bg {
+.header .menu--open .menu__bg {
   background: #ffbdc9 !important; }
 
-.menu--open .menu__icon span {
+.header .menu--open .menu__icon span {
   width: 100% !important;
   -webkit-transform-origin: 50% 50% !important;
   -ms-transform-origin: 50% 50% !important;
   transform-origin: 50% 50% !important; }
-  .menu--open .menu__icon span:nth-child(1) {
+  .header .menu--open .menu__icon span:nth-child(1) {
     -webkit-transform: rotate(45deg) translate(4px, 4px);
     -ms-transform: rotate(45deg) translate(4px, 4px);
     transform: rotate(45deg) translate(4px, 4px); }
-  .menu--open .menu__icon span:nth-child(2) {
+  .header .menu--open .menu__icon span:nth-child(2) {
     opacity: 0; }
-  .menu--open .menu__icon span:nth-child(3) {
+  .header .menu--open .menu__icon span:nth-child(3) {
     -webkit-transform: rotate(-45deg) translate(4px, -4px);
     -ms-transform: rotate(-45deg) translate(4px, -4px);
     transform: rotate(-45deg) translate(4px, -4px); }
 
 .intro {
   margin: 40px auto; }
+  .intro .intro__bio .hello-icon {
+    width: 40px;
+    height: auto; }
+  .intro .intro__bio h1 {
+    margin-top: 17px; }
+  .intro .intro__illustration {
+    display: none; }
 
-.intro__bio .hello-icon {
-  width: 40px;
-  height: auto; }
+footer .footer__contact-link {
+  border-top: 2px solid #f1f2f4;
+  padding: 27px 0; }
+  footer .footer__contact-link h2 {
+    margin: 0 0 5px; }
+  footer .footer__contact-link p {
+    margin: 0; }
 
-.intro__bio h1 {
-  margin-top: 17px; }
+footer .footer__contact-arrow {
+  border-top: 2px solid #f1f2f4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
+  footer .footer__contact-arrow .arrow {
+    width: 15px;
+    height: auto; }
 
-.illustration {
-  display: none; }
-
-footer .col-xs-12 {
-  border-top: 2px solid #f1f2f4; }
+#tr-footer {
+  width: 100%;
+  height: 1px;
+  background: transparent; }
 
 @media (min-width: 48em) {
-  .menu,
   .nav-mobile {
+    display: none; }
+  .header .menu {
     display: none; }
   .header .nav-desktop {
     list-style-type: none;
@@ -251,8 +299,25 @@ footer .col-xs-12 {
     display: flex;
     -webkit-box-pack: end;
     -ms-flex-pack: end;
-    justify-content: flex-end; }
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
     .header .nav-desktop li {
-      display: inline; }
+      display: inline;
+      font-size: 1.0625em; }
       .header .nav-desktop li:nth-of-type(2) {
-        margin: auto 40px; } }
+        margin: 0 40px; }
+      .header .nav-desktop li .fa-stack {
+        display: inline-block;
+        height: 36px;
+        line-height: 36px;
+        position: relative;
+        vertical-align: middle;
+        width: 36px; }
+      .header .nav-desktop li .fa-2x {
+        font-size: 0.9375em; }
+      .header .nav-desktop li .fa-stack-2x {
+        font-size: 37px; }
+      .header .nav-desktop li .fa-stack-1x {
+        left: 1px; } }
