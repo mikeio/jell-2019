@@ -6,5 +6,3 @@ $(document).ready(function(){
         $('.nav-mobile').toggleClass('nav-mobile--open');
     });
 });
-
-new WOW().init();

@@ -7,7 +7,6 @@
   <meta name="description" content="DESCRIPTION">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" type="text/css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css" type="text/css">
   <link rel="stylesheet" href="css/style.css" type="text/css">
   <script src="https://kit.fontawesome.com/6842fb1baa.js" crossorigin="anonymous"></script>
 </head>
@@ -15,23 +14,35 @@
 <body>
 
   <div class="nav-mobile">
-      <ul>
-        <li><a href="#">Resume<span>.</span></a></li>
-        <li><a href="#">Contact<span>.</span></a></li>
-        <li><a href="#">LinkedIn<span>.</span></a></li>
-      </ul>
-      <div class="nav-mobile-bg"></div>
+
+    <div class="menu">
+      <div class='menu__bg'>
+        <div class="menu__icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+    <ul>
+      <li><a href="#">Resume<span>.</span></a></li>
+      <li><a href="#">Contact<span>.</span></a></li>
+      <li><a href="#">LinkedIn<span>.</span></a></li>
+    </ul>
+
+    <div class="nav-mobile-bg"></div>
+
   </div>
   
+
   <div class="main">
 
     <section class="header">
 
       <div class="row middle-xs">
-
         <div class="col-xs-6">
-
-          <img src="img/logo.svg" class="header__logo wow fadeInUp">
+          <img src="img/logo.svg" class="header__logo">
         </div>
 
         <div class="col-xs-6">
@@ -49,18 +60,6 @@
             </li>
           </ul>
 
-          <div class="menu">
-            <div class='menu__bg'>
-            
-              <div class="menu__icon">
-                 <span></span>
-                  <span></span>
-                  <span></span>
-              </div>
-  
-            </div>
-          </div>
-
         </div>
       </div>
 
@@ -71,14 +70,12 @@
       <div class="row">
 
         <div class="col-xs-12">
-
           <div class="intro__bio">
             <img src="img/hello-icon.png" class="hello-icon">
             <h1>Hello! I’m Jell,<br>Director of Email Marketing.</h1>
             <p>I lead a team of marketers that manage, develop and execute email marketing strategies for automotive dealers across the US and Canada.</p>
             <a class="btn">View Resume</a>
           </div>
-          
         </div>
 
         <div class="col-xs-12 intro__illustration">
@@ -121,7 +118,7 @@
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/velocity/2.0.5/velocity.js"></script>
 <script type="text/javascript" src="js/scripts.js"></script>
 
 
