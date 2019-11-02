@@ -78,6 +78,10 @@ body {
   overflow-y: scroll;
   height: 100%; }
 
+.blur {
+  -webkit-filter: blur(10px);
+  filter: blur(10px); }
+
 h1 {
   font-size: 1.75em;
   font-family: 'CircularStd', sans-serif;
@@ -127,7 +131,14 @@ a {
   background: #ffffff;
   margin: 18px;
   padding: 42px 42px 8px 42px;
-  overflow: auto; }
+  overflow: auto;
+  -webkit-transition: .3s filter linear;
+  -o-transition: .3s filter linear;
+  transition: .3s filter linear;
+  -webkit-transition: .3s -webkit-filter linear;
+  -moz-transition: .3s -moz-filter linear;
+  -ms-transition: .3s -ms-filter linear;
+  -o-transition: .3s -o-filter linear; }
 
 .nav-mobile .menu .menu__bg {
   position: absolute;
@@ -206,6 +217,7 @@ a {
   background-size: 1440px auto;
   background-position: center center;
   background-repeat: repeat;
+  z-index: 1;
   -webkit-transition: all .6s linear;
   -o-transition: all .6s linear;
   transition: all .6s linear; }

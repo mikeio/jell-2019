@@ -4,6 +4,7 @@ $(document).ready(function(){
 		$('body').toggleClass('fixed');
         $('.menu').toggleClass('menu--open');
         $('.nav-mobile').toggleClass('nav-mobile--open');
+        $('.main').toggleClass('blur');
     });
 });
 

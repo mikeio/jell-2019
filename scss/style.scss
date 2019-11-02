@@ -36,6 +36,10 @@ body {
   height: 100%;
 }
 
+.blur {
+  filter: blur(10px);
+}
+
 h1 {
   font-size: 1.75em;
   font-family: 'CircularStd', sans-serif;
@@ -87,6 +91,11 @@ a {
   margin: 18px;
   padding: 42px 42px 8px 42px;
   overflow: auto;
+  transition: .3s filter linear;
+-webkit-transition: .3s -webkit-filter linear;
+-moz-transition: .3s -moz-filter linear;
+-ms-transition: .3s -ms-filter linear;
+-o-transition: .3s -o-filter linear;
 }
 
 .nav-mobile {
@@ -182,6 +191,7 @@ a {
     background-size: 1440px auto;
     background-position: center center;
     background-repeat: repeat;
+    z-index: 1;
   
     transition: all .6s linear;
   }
