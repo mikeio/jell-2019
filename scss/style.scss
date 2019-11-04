@@ -91,11 +91,12 @@ a {
   margin: 18px;
   padding: 42px 42px 8px 42px;
   overflow: auto;
-  transition: .3s filter linear;
--webkit-transition: .3s -webkit-filter linear;
--moz-transition: .3s -moz-filter linear;
--ms-transition: .3s -ms-filter linear;
--o-transition: .3s -o-filter linear;
+  
+  transition: .6s filter ease-in-out;
+  -webkit-transition: .6s -webkit-filter ease-in-out;
+  -moz-transition: .6s -moz-filter ease-in-out;
+  -ms-transition: .6s -ms-filter ease-in-out;
+  -o-transition: .6s -o-filter ease-in-out;
 }
 
 .nav-mobile {
@@ -116,7 +117,7 @@ a {
       justify-content: center;
       z-index: 2;
   
-      transition: all .3s linear;
+      transition: all .3s ease-in-out;
     }
   
     .menu__icon {
@@ -130,7 +131,7 @@ a {
         display: block;
         border-radius: 100px;
   
-        transition: all .3s linear;
+        transition: all .3s ease-in-out;
     
           &:nth-child(1) {
             width: 8px;
@@ -193,7 +194,7 @@ a {
     background-repeat: repeat;
     z-index: 1;
   
-    transition: all .6s linear;
+    transition: all .6s .1s ease-in-out;
   }
 }
   
@@ -212,7 +213,7 @@ a {
     li {
       text-align: center;
 
-      animation: slide-down 1s linear;
+      animation: slide-down 1s ease-in-out;
 
       a {
         color: $white;

@@ -132,13 +132,13 @@ a {
   margin: 18px;
   padding: 42px 42px 8px 42px;
   overflow: auto;
-  -webkit-transition: .3s filter linear;
-  -o-transition: .3s filter linear;
-  transition: .3s filter linear;
-  -webkit-transition: .3s -webkit-filter linear;
-  -moz-transition: .3s -moz-filter linear;
-  -ms-transition: .3s -ms-filter linear;
-  -o-transition: .3s -o-filter linear; }
+  -webkit-transition: .6s filter ease-in-out;
+  -o-transition: .6s filter ease-in-out;
+  transition: .6s filter ease-in-out;
+  -webkit-transition: .6s -webkit-filter ease-in-out;
+  -moz-transition: .6s -moz-filter ease-in-out;
+  -ms-transition: .6s -ms-filter ease-in-out;
+  -o-transition: .6s -o-filter ease-in-out; }
 
 .nav-mobile .menu .menu__bg {
   position: absolute;
@@ -159,9 +159,9 @@ a {
   -ms-flex-pack: center;
   justify-content: center;
   z-index: 2;
-  -webkit-transition: all .3s linear;
-  -o-transition: all .3s linear;
-  transition: all .3s linear; }
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out; }
 
 .nav-mobile .menu .menu__icon {
   width: 14px;
@@ -172,9 +172,9 @@ a {
     background: #ffffff;
     display: block;
     border-radius: 100px;
-    -webkit-transition: all .3s linear;
-    -o-transition: all .3s linear;
-    transition: all .3s linear; }
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out; }
     .nav-mobile .menu .menu__icon span:nth-child(1) {
       width: 8px; }
     .nav-mobile .menu .menu__icon span:nth-child(2) {
@@ -218,9 +218,9 @@ a {
   background-position: center center;
   background-repeat: repeat;
   z-index: 1;
-  -webkit-transition: all .6s linear;
-  -o-transition: all .6s linear;
-  transition: all .6s linear; }
+  -webkit-transition: all .6s .1s ease-in-out;
+  -o-transition: all .6s .1s ease-in-out;
+  transition: all .6s .1s ease-in-out; }
 
 .nav-mobile--open ul {
   position: absolute;
@@ -235,8 +235,8 @@ a {
   opacity: 1; }
   .nav-mobile--open ul li {
     text-align: center;
-    -webkit-animation: slide-down 1s linear;
-    animation: slide-down 1s linear; }
+    -webkit-animation: slide-down 1s ease-in-out;
+    animation: slide-down 1s ease-in-out; }
     .nav-mobile--open ul li a {
       color: #ffffff;
       font-size: 1.75em;
