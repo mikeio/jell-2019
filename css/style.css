@@ -154,12 +154,15 @@ a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: .6s margin ease-in-out, .6s width ease-in-out, .6s height ease-in-out, 0s 1.2s z-index ease-in-out, .6s .6s opacity ease-in-out;
-  -o-transition: .6s margin ease-in-out, .6s width ease-in-out, .6s height ease-in-out, 0s 1.2s z-index ease-in-out, .6s .6s opacity ease-in-out;
-  transition: .6s margin ease-in-out, .6s width ease-in-out, .6s height ease-in-out, 0s 1.2s z-index ease-in-out, .6s .6s opacity ease-in-out; }
+  -webkit-transition: margin .6s ease-in-out, width .6s ease-in-out, height .6s ease-in-out, z-index 0s ease-in-out 4s, opacity .6s ease-in-out 2s;
+  -o-transition: margin .6s ease-in-out, width .6s ease-in-out, height .6s ease-in-out, z-index 0s ease-in-out 4s, opacity .6s ease-in-out 2s;
+  transition: margin .6s ease-in-out, width .6s ease-in-out, height .6s ease-in-out, z-index 0s ease-in-out 4s, opacity .6s ease-in-out 2s; }
   .loading img {
     width: 42px;
-    height: auto; }
+    height: auto;
+    -webkit-transition: opacity 0.3s ease-in-out 0.6s;
+    -o-transition: opacity 0.3s ease-in-out 0.6s;
+    transition: opacity 0.3s ease-in-out 0.6s; }
 
 .loading--ready {
   margin: 18px;
@@ -167,6 +170,8 @@ a {
   height: calc(100% - 36px);
   opacity: 0;
   z-index: -1; }
+  .loading--ready img {
+    opacity: 0; }
 
 .nav-mobile ul {
   display: none; }

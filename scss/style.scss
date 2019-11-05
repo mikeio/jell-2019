@@ -108,15 +108,17 @@ a {
     justify-content: center;
     align-items: center;
 
-    transition: .6s margin ease-in-out,
-                .6s width ease-in-out,
-                .6s height ease-in-out,
-                 0s 1.2s z-index ease-in-out,
-                .6s .6s opacity ease-in-out;
+    transition: margin .6s ease-in-out,
+                width .6s ease-in-out,
+                height .6s ease-in-out,
+                z-index 0s ease-in-out 4s,
+                opacity .6s ease-in-out 2s;
 
     img {
       width: 42px;
       height: auto;
+
+      transition: opacity .3s ease-in-out .6s,
     }
 }
 
@@ -126,6 +128,10 @@ a {
   height: calc(100% - 36px);
   opacity: 0;
   z-index: -1;
+
+  img {
+    opacity: 0;
+  }
 }
 
 .nav-mobile {
