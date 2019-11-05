@@ -6,6 +6,8 @@ $(document).ready(function(){
         $('.nav-mobile').toggleClass('nav-mobile--open');
     });
 
+    new WOW().init();
+
 });
 
 $( window ).on("load", function() {
@@ -13,7 +15,5 @@ $( window ).on("load", function() {
     setTimeout(function() {
       $('.loading').addClass('loading--ready');
     }, 3000);
-
-    new WOW().init();
 
 });

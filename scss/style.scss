@@ -28,13 +28,12 @@ body {
   background-size: 1440px auto;
   background-repeat: repeat;
   background-position: center center;
-  height: 100%;
 }
 
 .body--fixed {
   position: fixed;
   overflow-y: scroll;
-  
+  height: 100%;
 }
 
 h1 {
@@ -85,42 +84,35 @@ a {
 }
 
 .loading {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
     background-color: $white;
+    position: fixed;
+    top: 0;
     z-index: 999;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    transition: width 1s ease-in-out 1s,
-                height 1s ease-in-out 1s,
-                opacity 1s ease-in-out 2s,
-                z-index 0s ease-in-out 3s;
+    transition: transform .9s cubic-bezier(0.7,0,0.3,1) .6s;
 
     img {
       width: 42px;
       height: auto;
-
-      animation: slide-up 1s ease-in-out;
-      animation-fill-mode:forwards;
+      display: block;
     }
 
+    .loading__container {
+      animation: slide-up .6s ease-in-out;
+      animation-fill-mode: forwards;
+    }
 }
 
 .loading--ready {
-  width: calc(100% - 36px);
-  height: calc(100% - 36px);
-  opacity: 0;
-  z-index: -1;
+  transform: translateY(-100%);
 
-  img {
-    animation: slide-out 1s ease-in-out;
-    animation-fill-mode:forwards;
+  .loading__container {
+    animation: slide-out .6s ease-in-out;
+    animation-fill-mode: forwards;
   }
 }
 

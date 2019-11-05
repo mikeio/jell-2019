@@ -106,12 +106,12 @@ body {
   background: #f9ddd6 url("../img/floral_tan.jpg");
   background-size: 1440px auto;
   background-repeat: repeat;
-  background-position: center center;
-  height: 100%; }
+  background-position: center center; }
 
 .body--fixed {
   position: fixed;
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  height: 100%; }
 
 h1 {
   font-size: 1.75em;
@@ -160,15 +160,11 @@ a {
   display: inline-block; }
 
 .loading {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
   background-color: #ffffff;
+  position: fixed;
+  top: 0;
   z-index: 999;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -179,25 +175,28 @@ a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-transition: width 1s ease-in-out 1s, height 1s ease-in-out 1s, opacity 1s ease-in-out 2s, z-index 0s ease-in-out 3s;
-  -o-transition: width 1s ease-in-out 1s, height 1s ease-in-out 1s, opacity 1s ease-in-out 2s, z-index 0s ease-in-out 3s;
-  transition: width 1s ease-in-out 1s, height 1s ease-in-out 1s, opacity 1s ease-in-out 2s, z-index 0s ease-in-out 3s; }
+  -webkit-transition: -webkit-transform 0.9s cubic-bezier(0.7, 0, 0.3, 1) 0.6s;
+  transition: -webkit-transform 0.9s cubic-bezier(0.7, 0, 0.3, 1) 0.6s;
+  -o-transition: transform 0.9s cubic-bezier(0.7, 0, 0.3, 1) 0.6s;
+  transition: transform 0.9s cubic-bezier(0.7, 0, 0.3, 1) 0.6s;
+  transition: transform 0.9s cubic-bezier(0.7, 0, 0.3, 1) 0.6s, -webkit-transform 0.9s cubic-bezier(0.7, 0, 0.3, 1) 0.6s; }
   .loading img {
     width: 42px;
     height: auto;
-    -webkit-animation: slide-up 1s ease-in-out;
-    animation: slide-up 1s ease-in-out;
+    display: block; }
+  .loading .loading__container {
+    -webkit-animation: slide-up .6s ease-in-out;
+    animation: slide-up .6s ease-in-out;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards; }
 
 .loading--ready {
-  width: calc(100% - 36px);
-  height: calc(100% - 36px);
-  opacity: 0;
-  z-index: -1; }
-  .loading--ready img {
-    -webkit-animation: slide-out 1s ease-in-out;
-    animation: slide-out 1s ease-in-out;
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%); }
+  .loading--ready .loading__container {
+    -webkit-animation: slide-out .6s ease-in-out;
+    animation: slide-out .6s ease-in-out;
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards; }
 
