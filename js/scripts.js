@@ -12,10 +12,8 @@ $( window ).on("load", function() {
 
     setTimeout(function() {
       $('.loading').addClass('loading--ready');
-    }, 1000);
+    }, 3000);
 
-    setTimeout(function(){ 
-    	new WOW().init();
-    }, 300);
+    new WOW().init();
 
 });

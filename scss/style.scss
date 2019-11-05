@@ -28,12 +28,13 @@ body {
   background-size: 1440px auto;
   background-repeat: repeat;
   background-position: center center;
+  height: 100%;
 }
 
 .body--fixed {
   position: fixed;
   overflow-y: scroll;
-  height: 100%;
+  
 }
 
 h1 {
@@ -83,54 +84,43 @@ a {
   display: inline-block;
 }
 
-.main {
-  background: $white;
-  margin: 18px;
-  padding: 42px;
-  overflow: auto;
-  
-  transition: .6s filter ease-in-out;
-  -webkit-transition: .6s -webkit-filter ease-in-out;
-  -moz-transition: .6s -moz-filter ease-in-out;
-  -ms-transition: .6s -ms-filter ease-in-out;
-  -o-transition: .6s -o-filter ease-in-out;
-}
-
 .loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
     background-color: $white;
-    position: fixed;
-    top: 0;
-    left: 0;
     z-index: 999;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    transition: margin .6s ease-in-out,
-                width .6s ease-in-out,
-                height .6s ease-in-out,
-                z-index 0s ease-in-out 4s,
-                opacity .6s ease-in-out 2s;
+    transition: width 1s ease-in-out 1s,
+                height 1s ease-in-out 1s,
+                opacity 1s ease-in-out 2s,
+                z-index 0s ease-in-out 3s;
 
     img {
       width: 42px;
       height: auto;
 
-      transition: opacity .3s ease-in-out .6s,
+      animation: slide-up 1s ease-in-out;
+      animation-fill-mode:forwards;
     }
+
 }
 
 .loading--ready {
-  margin: 18px;
   width: calc(100% - 36px);
   height: calc(100% - 36px);
   opacity: 0;
   z-index: -1;
 
   img {
-    opacity: 0;
+    animation: slide-out 1s ease-in-out;
+    animation-fill-mode:forwards;
   }
 }
 
@@ -276,6 +266,19 @@ a {
     top: calc(-125vh + 78px);
     right: calc(-125vh + 78px);
   }
+}
+
+.main {
+  background: $white;
+  margin: 18px;
+  padding: 42px;
+  overflow: auto;
+  
+  transition: .6s filter ease-in-out;
+  -webkit-transition: .6s -webkit-filter ease-in-out;
+  -moz-transition: .6s -moz-filter ease-in-out;
+  -ms-transition: .6s -ms-filter ease-in-out;
+  -o-transition: .6s -o-filter ease-in-out;
 }
 
 .header {
