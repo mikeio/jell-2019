@@ -14,6 +14,6 @@ $( window ).on("load", function() {
 
     setTimeout(function() {
       $('.loading').addClass('loading--ready');
-    }, 3000);
+    }, 1000);
 
 });
