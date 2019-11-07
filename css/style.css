@@ -64,7 +64,7 @@
     -webkit-transform: translateY(0); }
   100% {
     opacity: 0;
-    -webkit-transform: translateY(-2rem); } }
+    -webkit-transform: translateY(-1rem); } }
 
 @keyframes slide-out {
   0% {
@@ -72,12 +72,12 @@
     -webkit-transform: translateY(0); }
   100% {
     opacity: 0;
-    -webkit-transform: translateY(-2rem); } }
+    -webkit-transform: translateY(-1rem); } }
 
 @-webkit-keyframes slide-down {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(-2rem); }
+    -webkit-transform: translateY(-1.5rem); }
   100% {
     opacity: 1;
     -webkit-transform: translateY(0); } }
@@ -85,7 +85,7 @@
 @keyframes slide-down {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(-2rem); }
+    -webkit-transform: translateY(-1.5rem); }
   100% {
     opacity: 1;
     -webkit-transform: translateY(0); } }
@@ -101,6 +101,9 @@
     opacity: 0; }
   100% {
     opacity: 1; } }
+
+.div {
+  border: 1px solid #242333; }
 
 html {
   height: 100%;
@@ -161,6 +164,11 @@ p {
 a {
   text-decoration: none;
   color: #242333; }
+
+.row {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto; }
 
 .btn {
   font-size: 0.875em;
@@ -386,4 +394,41 @@ footer .footer--container {
       .header .nav-desktop li .fa-stack-2x {
         font-size: 37px; }
       .header .nav-desktop li .fa-stack-1x {
-        left: 1px; } }
+        left: 1px; }
+  .intro .intro__illustration {
+    display: block;
+    text-align: right; }
+    .intro .intro__illustration img {
+      width: 100%;
+      height: auto;
+      -webkit-transform: translateY(-30px);
+      -ms-transform: translateY(-30px);
+      transform: translateY(-30px);
+      max-width: 442px; } }
+
+@media (min-width: 75em) {
+  h1 {
+    font-size: 3em;
+    letter-spacing: -.016em;
+    line-height: 1.083; }
+  p {
+    font-size: 1.063em;
+    margin-top: 0;
+    color: #a2abb5; }
+  .btn {
+    font-size: 1em;
+    padding: 18px 32px; }
+  .main {
+    margin: 50px;
+    padding: 55px; }
+  .header .header__logo {
+    width: 50px; }
+  .intro {
+    margin: 83px auto; }
+    .intro .intro__bio .hello-icon {
+      width: 56px; }
+    .intro .intro__bio h1 {
+      margin-top: 17px;
+      margin-bottom: 20px; }
+    .intro .intro__bio p {
+      margin-bottom: 32px; } }

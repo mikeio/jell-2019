@@ -10,7 +10,7 @@ $tan:         #f9ddd6;
 @import "fonts";
 @import "effects";
 
-// .header { border: 1px solid $black; }
+.div { border: 1px solid $black; }
 
 html {
   height: 100%;
@@ -72,6 +72,12 @@ p {
 a {
   text-decoration: none;
   color: $black;
+}
+
+.row {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .btn {
@@ -395,6 +401,21 @@ footer {
       }
     }
   }
+
+  .intro {
+  
+    .intro__illustration {
+      display: block;
+      text-align: right;
+
+      img {
+        width: 100%;
+        height: auto;
+        transform: translateY(-30px);
+        max-width: 442px;
+      }
+    }
+  }
 }
 
 // 1024px+
@@ -405,4 +426,54 @@ footer {
 // 1200px+
 @media (min-width: 75em) {
 
+  h1 {
+    font-size: 3em;
+    letter-spacing: -.016em;
+    line-height: 1.083;
+  }
+
+  p {
+    font-size: 1.063em;
+    margin-top: 0;
+    color: $gray;
+  }
+
+  .btn {
+    font-size: 1em;
+    padding: 18px 32px;
+  }
+
+  .main {
+    margin: 50px;
+    padding: 55px;
+  }
+  
+  .header {
+  
+    .header__logo {
+      width: 50px;
+    }
+  
+  }
+
+  .intro {
+    margin: 83px auto;
+
+    .intro__bio {
+  
+      .hello-icon {
+        width: 56px;
+      }
+    
+      h1 { 
+        margin-top: 17px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        margin-bottom: 32px;
+      }
+    }
+
+  }
 }
