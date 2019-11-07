@@ -45,17 +45,17 @@
 }
 
 @keyframes slide-up {
-      0% { opacity: 0; -webkit-transform: translateY(100%); }   
+      0% { opacity: 0; -webkit-transform: translateY(75%); }   
     100% { opacity: 1; -webkit-transform: translateY(0); }
 }
 
 @keyframes slide-out {
       0% { opacity: 1; -webkit-transform: translateY(0); }   
-    100% { opacity: 0; -webkit-transform: translateY(-100%); }
+    100% { opacity: 0; -webkit-transform: translateY(-2rem); }
 }
 
 @keyframes slide-down {
-      0% { opacity: 0; -webkit-transform: translateY(-75%); }   
+      0% { opacity: 0; -webkit-transform: translateY(-2rem); }   
     100% { opacity: 1; -webkit-transform: translateY(0); }
 }
 
