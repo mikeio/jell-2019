@@ -363,7 +363,22 @@ footer .footer--container {
   height: 1px;
   background: transparent; }
 
-@media (min-width: 48em) {
+@media (min-width: 64em) {
+  h1 {
+    font-size: 3em;
+    line-height: 1.083; }
+  p {
+    font-size: 1.063em;
+    margin-top: 0;
+    color: #a2abb5; }
+  .btn {
+    font-size: 1em;
+    padding: 18px 32px; }
+  .main {
+    margin: 50px;
+    padding: 55px; }
+  .header .header__logo {
+    width: 50px; }
   .nav-mobile {
     display: none; }
   .header .nav-desktop {
@@ -381,7 +396,7 @@ footer .footer--container {
       display: inline;
       font-size: 1.0625em; }
       .header .nav-desktop li:nth-of-type(2) {
-        margin: 0 40px; }
+        margin: 0 80px; }
       .header .nav-desktop li .fa-stack {
         display: inline-block;
         height: 36px;
@@ -390,45 +405,32 @@ footer .footer--container {
         vertical-align: middle;
         width: 36px; }
       .header .nav-desktop li .fa-2x {
-        font-size: 0.9375em; }
+        font-size: 0.9375em;
+        color: #ff6687; }
       .header .nav-desktop li .fa-stack-2x {
         font-size: 37px; }
       .header .nav-desktop li .fa-stack-1x {
         left: 1px; }
-  .intro .intro__illustration {
-    display: block;
-    text-align: right; }
-    .intro .intro__illustration img {
-      width: 100%;
-      height: auto;
-      -webkit-transform: translateY(-30px);
-      -ms-transform: translateY(-30px);
-      transform: translateY(-30px);
-      max-width: 442px; } }
-
-@media (min-width: 75em) {
-  h1 {
-    font-size: 3em;
-    letter-spacing: -.016em;
-    line-height: 1.083; }
-  p {
-    font-size: 1.063em;
-    margin-top: 0;
-    color: #a2abb5; }
-  .btn {
-    font-size: 1em;
-    padding: 18px 32px; }
-  .main {
-    margin: 50px;
-    padding: 55px; }
-  .header .header__logo {
-    width: 50px; }
   .intro {
-    margin: 83px auto; }
+    margin: 60px auto 60px; }
     .intro .intro__bio .hello-icon {
       width: 56px; }
     .intro .intro__bio h1 {
       margin-top: 17px;
       margin-bottom: 20px; }
     .intro .intro__bio p {
-      margin-bottom: 32px; } }
+      margin-bottom: 32px; }
+    .intro .intro__illustration {
+      display: block;
+      text-align: right; }
+      .intro .intro__illustration img {
+        width: 100%;
+        height: auto;
+        max-width: 442px; }
+  footer .col-xs-12 {
+    padding: 50px 0 0;
+    margin-bottom: -5px; }
+  footer .footer--container h2 {
+    font-size: 1em; }
+  footer .footer--container p {
+    font-size: 1.063em; } }

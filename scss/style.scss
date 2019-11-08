@@ -358,77 +358,14 @@ footer {
 // 768px+
 @media (min-width: 48em) {
 
-  .nav-mobile {
-    display: none;
-  }
 
-  .header {
-
-    .nav-desktop {
-      list-style-type: none;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-
-      li {
-        display: inline;
-        font-size: 1.0625em;
-
-        &:nth-of-type(2) {
-          margin: 0 40px;
-        }
-
-        .fa-stack {
-          display: inline-block;
-          height: 36px;
-          line-height: 36px;
-          position: relative;
-          vertical-align: middle;
-          width: 36px;
-        }
-        
-        .fa-2x {
-            font-size: 0.9375em;
-        }
-        
-        .fa-stack-2x {
-            font-size: 37px;
-        }
-  
-        .fa-stack-1x {
-          left: 1px;
-        }
-      }
-    }
-  }
-
-  .intro {
-  
-    .intro__illustration {
-      display: block;
-      text-align: right;
-
-      img {
-        width: 100%;
-        height: auto;
-        transform: translateY(-30px);
-        max-width: 442px;
-      }
-    }
-  }
 }
 
 // 1024px+
 @media (min-width: 64em) {
 
-}
-
-// 1200px+
-@media (min-width: 75em) {
-
   h1 {
     font-size: 3em;
-    letter-spacing: -.016em;
     line-height: 1.083;
   }
 
@@ -456,8 +393,53 @@ footer {
   
   }
 
+  .nav-mobile {
+    display: none;
+  }
+
+  .header {
+
+    .nav-desktop {
+      list-style-type: none;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      li {
+        display: inline;
+        font-size: 1.0625em;
+
+        &:nth-of-type(2) {
+          margin: 0 80px;
+        }
+
+        .fa-stack {
+          display: inline-block;
+          height: 36px;
+          line-height: 36px;
+          position: relative;
+          vertical-align: middle;
+          width: 36px;
+        }
+        
+        .fa-2x {
+            font-size: 0.9375em;
+            color: $pink;
+        }
+        
+        .fa-stack-2x {
+            font-size: 37px;
+        }
+  
+        .fa-stack-1x {
+          left: 1px;
+        }
+      }
+    }
+  }
+
   .intro {
-    margin: 83px auto;
+    margin: 60px auto 60px;
 
     .intro__bio {
   
@@ -474,6 +456,42 @@ footer {
         margin-bottom: 32px;
       }
     }
+  
+    .intro__illustration {
+      display: block;
+      text-align: right;
 
+      img {
+        width: 100%;
+        height: auto;
+        max-width: 442px;
+      }
+    }
   }
+
+  footer {
+
+    .col-xs-12 {
+      padding: 50px 0 0;
+      margin-bottom: -5px;
+    }
+
+    .footer--container {
+
+      h2 {
+        font-size: 1em;
+      }
+
+      p {
+        font-size: 1.063em;
+      }
+
+    }
+  }
+
+}
+
+// 1200px+
+@media (min-width: 75em) {
+
 }
