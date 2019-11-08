@@ -46,6 +46,15 @@ h1 {
 }
 
 h2 {
+  font-size: 2em;
+  font-family: 'CircularStd', sans-serif;
+  color: $black;
+  letter-spacing: -.016em;
+  line-height: 1.143;
+  margin-bottom: 20px;
+}
+
+h3 {
   font-family: 'Poppins', sans-serif;
   font-size: 0.875em;
   color: $black;
@@ -330,7 +339,7 @@ footer {
       display: block;
     }
 
-    h2 {
+    h3 {
       margin: 0 0 5px;
     }
 
@@ -477,7 +486,7 @@ footer {
 
     .footer--container {
 
-      h2 {
+      h3 {
         font-size: 1em;
       }
 
