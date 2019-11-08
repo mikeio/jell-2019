@@ -163,8 +163,8 @@ a {
   
     .menu__bg {
       position: absolute;
-      right: 61px;
-      top: 61px;
+      right: 66px;
+      top: 66px;
       width: 36px;
       height: 36px;
       background: transparent;
@@ -237,8 +237,8 @@ a {
 
   .nav-mobile-bg {
     position: absolute;
-    right: 61px;
-    top: 61px;
+    right: 66px;
+    top: 66px;
     width: 36px;
     height: 36px;
     border-radius: 50%;
@@ -268,15 +268,15 @@ a {
   .nav-mobile-bg {
     width: 250vh;
     height: 250vh;
-    top: calc(-125vh + 78px);
-    right: calc(-125vh + 78px);
+    top: calc(-125vh + 83px);
+    right: calc(-125vh + 83px);
   }
 }
 
 .main {
   background: $white;
-  margin: 18px;
-  padding: 42px;
+  margin: 20px;
+  padding: 45px;
 }
 
 .header {
@@ -439,7 +439,7 @@ footer {
   }
 
   .intro {
-    margin: 60px auto 60px;
+    margin: 100px auto;
 
     .intro__bio {
   

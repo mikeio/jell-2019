@@ -208,8 +208,8 @@ a {
 
 .nav-mobile .menu .menu__bg {
   position: absolute;
-  right: 61px;
-  top: 61px;
+  right: 66px;
+  top: 66px;
   width: 36px;
   height: 36px;
   background: transparent;
@@ -271,8 +271,8 @@ a {
 
 .nav-mobile .nav-mobile-bg {
   position: absolute;
-  right: 61px;
-  top: 61px;
+  right: 66px;
+  top: 66px;
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -308,13 +308,13 @@ a {
 .nav-mobile--open .nav-mobile-bg {
   width: 250vh;
   height: 250vh;
-  top: calc(-125vh + 78px);
-  right: calc(-125vh + 78px); }
+  top: calc(-125vh + 83px);
+  right: calc(-125vh + 83px); }
 
 .main {
   background: #ffffff;
-  margin: 18px;
-  padding: 42px; }
+  margin: 20px;
+  padding: 45px; }
 
 .header .header__logo {
   width: 42px;
@@ -412,7 +412,7 @@ footer .footer--container {
       .header .nav-desktop li .fa-stack-1x {
         left: 1px; }
   .intro {
-    margin: 60px auto 60px; }
+    margin: 100px auto; }
     .intro .intro__bio .hello-icon {
       width: 56px; }
     .intro .intro__bio h1 {
