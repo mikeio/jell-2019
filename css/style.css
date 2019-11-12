@@ -354,10 +354,8 @@ a {
   .intro .intro__illustration {
     display: none; }
 
-.resume {
-  border: 1px solid red; }
-  .resume h1, .resume h2 {
-    margin: 0; }
+.resume h1, .resume h2 {
+  margin: 0; }
 
 footer .col-xs-12 {
   border-top: 2px solid #f1f2f4;
